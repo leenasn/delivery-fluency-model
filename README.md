@@ -1,11 +1,11 @@
-### Continuous Delivery Maturity Model Gap Analysis Visualization Tool
-Gap analysis visualization tool for the '[Continuous Delivery Maturity Model](https://secure.surveymonkey.com/_resources/28183/23008183/bf361750-7418-458f-85a6-6c07333e4986.png)'. Based on model from the book, '**Continuous Delivery:** *Reliable Software Releases through Build, Test, and Deployment Automation*', by Jez Humble and David Farley, available on [Amazon](http://www.amazon.com/dp/0321601912).
+### Continuous Delivery Fluency Model Analysis Visualization Tool
+Gap analysis visualization tool for the '[Continuous Delivery Maturity Model](http://www.infoq.com/resource/articles/Continuous-Delivery-Maturity-Model/en/resources/fig1large.jpg)' based on the book, '**Continuous Delivery:** *Reliable Software Releases through Build, Test, and Deployment Automation*', by Jez Humble and David Farley, available on [Amazon](http://www.amazon.com/dp/0321601912).
 
 ### Technology
 Browser-based tool, using [d3](http://d3js.org/) JavaScript library. Visualizations rendered using JavaScript and SVG.
 
 ### Preview with Sample Data
-[![CD Gap Analysis](https://github.com/garystafford/cd-maturity-model/blob/master/images/screenshot_thumbnail.png?raw=true)](https://github.com/garystafford/cd-maturity-model/blob/master/images/screenshot.png?raw=true)
+[![CD Analysis](https://github.com/garystafford/cd-maturity-model/blob/master/images/screenshot_thumbnail.png?raw=true)](https://github.com/garystafford/cd-maturity-model/blob/master/images/screenshot.png?raw=true)
 
 ### Helpful Links:
 * d3 and Radar Charts

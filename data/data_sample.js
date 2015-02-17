@@ -16,38 +16,43 @@ var dataModule = (function () {
     var categories,
         maturityLevels;
 
-    categories = [
+    /*categories = [
         'Build Management and Continuous Integration',
         'Environments and Deployment',
         'Release Management and Compliance',
         'Testing',
         'Data Management',
         'Configuration Management'
+    ];*/
+    categories = [
+        'Culture and Organization',
+        'Design and Architecture',
+        'Build and Deploy',
+        'Test and Verification',
+        'Information and Reporting'
     ];
 
+
     maturityLevels = [{
-        score: -2,
-        definition: 'Unranked'
-    }, {
         score: -1,
-        definition: 'Optimizing'
+        definition: 'Base'
     }, {
         score: 0,
-        definition: 'Quantitatively Managed'
+        definition: 'Begineer'
     }, {
         score: 1,
-        definition: 'Consistent'
+        definition: 'Intermediate'
     }, {
         score: 2,
-        definition: 'Repeatable'
+        definition: 'Advanced'
     }, {
         score: 3,
-        definition: 'Regressive'
+        definition: 'Expert'
     }];
 
     return {
-        pageTitle: 'CD Maturity Gap Analysis: First Federated Bank',
-        legendTitle: 'Banking Systems',
+        pageTitle: 'CD Maturity Gap Analysis: Multunus',
+        legendTitle: 'Products',
         averageTitle: 'Average Maturity - All Systems',
         idAverageCategories: 100,
         colorScale: d3.scale.category10(),
@@ -61,281 +66,69 @@ var dataModule = (function () {
             [{
                 'app': '',
                 'axis': categories[0],
-                value: -2
+                value: -1
             }, {
                 'app': '',
                 'axis': categories[1],
-                value: -2
+                value: -1
             }, {
                 'app': '',
                 'axis': categories[2],
-                value: -2
+                value: -1
             }, {
                 'app': '',
                 'axis': categories[3],
-                value: -2
+                value: -1
             }, {
                 'app': '',
                 'axis': categories[4],
-                value: -2
-            }, {
-                'app': '',
-                'axis': categories[5],
-                value: -2
+                value: -1
             }]
         ],
 
         maturityData: [
             [{
-                'app': 'Core Banking Application',
-                'axis': categories[0],
-                'value': -1
-            }, {
-                'app': 'Core Banking Application',
-                'axis': categories[1],
-                'value': -1
-            }, {
-                'app': 'Core Banking Application',
-                'axis': categories[2],
-                'value': 1
-            }, {
-                'app': 'Core Banking Application',
-                'axis': categories[3],
-                'value': -1
-            }, {
-                'app': 'Core Banking Application',
-                'axis': categories[4],
-                'value': 0
-            }, {
-                'app': 'Core Banking Application',
-                'axis': categories[5],
-                'value': 2
-            }],
-            [{
-                'app': 'Internet Banking Application',
-                'axis': categories[0],
-                'value': 1
-            }, {
-                'app': 'Internet Banking Application',
-                'axis': categories[1],
-                'value': 0
-            }, {
-                'app': 'Internet Banking Application',
-                'axis': categories[2],
-                'value': 2
-            }, {
-                'app': 'Internet Banking Application',
-                'axis': categories[3],
-                'value': -1
-            }, {
-                'app': 'Internet Banking Application',
-                'axis': categories[4],
-                'value': 1
-            }, {
-                'app': 'Internet Banking Application',
-                'axis': categories[5],
-                'value': 0
-            }],
-            [{
-                'app': 'Human Resources Application',
+                'app': 'bidPress',
                 'axis': categories[0],
                 'value': 0
             }, {
-                'app': 'Human Resources Application',
+                'app': 'bidPress',
                 'axis': categories[1],
-                'value': -1
-            }, {
-                'app': 'Human Resources Application',
-                'axis': categories[2],
-                'value': 1
-            }, {
-                'app': 'Human Resources Application',
-                'axis': categories[3],
-                'value': 1
-            }, {
-                'app': 'Human Resources Application',
-                'axis': categories[4],
-                'value': 0
-            }, {
-                'app': 'Human Resources Application',
-                'axis': categories[5],
-                'value': 0
-            }],
-            [{
-                'app': 'ATM Management Application',
-                'axis': categories[0],
                 'value': 2
             }, {
-                'app': 'ATM Management Application',
-                'axis': categories[1],
-                'value': 0
-            }, {
-                'app': 'ATM Management Application',
-                'axis': categories[2],
-                'value': 0
-            }, {
-                'app': 'ATM Management Application',
-                'axis': categories[3],
-                'value': 2
-            }, {
-                'app': 'ATM Management Application',
-                'axis': categories[4],
-                'value': 1
-            }, {
-                'app': 'ATM Management Application',
-                'axis': categories[5],
-                'value': -1
-            }],
-            [{
-                'app': 'Equity Trading and Analytics Platform',
-                'axis': categories[0],
-                'value': 1
-            }, {
-                'app': 'Equity Trading and Analytics Platform',
-                'axis': categories[1],
-                'value': -1
-            }, {
-                'app': 'Equity Trading and Analytics Platform',
-                'axis': categories[2],
-                'value': 0
-            }, {
-                'app': 'Equity Trading and Analytics Platform',
-                'axis': categories[3],
-                'value': 2
-            }, {
-                'app': 'Equity Trading and Analytics Platform',
-                'axis': categories[4],
-                'value': 0
-            }, {
-                'app': 'Equity Trading and Analytics Platform',
-                'axis': categories[5],
-                'value': -1
-            }],
-            [{
-                'app': 'Risk Management Application',
-                'axis': categories[0],
-                'value': 2
-            }, {
-                'app': 'Risk Management Application',
-                'axis': categories[1],
-                'value': 0
-            }, {
-                'app': 'Risk Management Application',
-                'axis': categories[2],
-                'value': 1
-            }, {
-                'app': 'Risk Management Application',
-                'axis': categories[3],
-                'value': 3
-            }, {
-                'app': 'Risk Management Application',
-                'axis': categories[4],
-                'value': 1
-            }, {
-                'app': 'Risk Management Application',
-                'axis': categories[5],
-                'value': 2
-            }],
-            [{
-                'app': 'Mobile Banking Platform (iOS)',
-                'axis': categories[0],
-                'value': 2
-            }, {
-                'app': 'Mobile Banking Platform (iOS)',
-                'axis': categories[1],
-                'value': -1
-            }, {
-                'app': 'Mobile Banking Platform (iOS)',
-                'axis': categories[2],
-                'value': -1
-            }, {
-                'app': 'Mobile Banking Platform (iOS)',
-                'axis': categories[3],
-                'value': -1
-            }, {
-                'app': 'Mobile Banking Platform (iOS)',
-                'axis': categories[4],
-                'value': 1
-            }, {
-                'app': 'Mobile Banking Platform (iOS)',
-                'axis': categories[5],
-                'value': 0
-            }],
-            [{
-                'app': 'Mobile Banking Platform (Android)',
-                'axis': categories[0],
-                'value': 1
-            }, {
-                'app': 'Mobile Banking Platform (Android)',
-                'axis': categories[1],
-                'value': 0
-            }, {
-                'app': 'Mobile Banking Platform (Android)',
-                'axis': categories[2],
-                'value': 0
-            }, {
-                'app': 'Mobile Banking Platform (Android)',
-                'axis': categories[3],
-                'value': -1
-            }, {
-                'app': 'Mobile Banking Platform (Android)',
-                'axis': categories[4],
-                'value': 1
-            }, {
-                'app': 'Mobile Banking Platform (Android)',
-                'axis': categories[5],
-                'value': 2
-            }],
-            [{
-                'app': 'Purchasing and Inventory Control System',
-                'axis': categories[0],
-                'value': -1
-            }, {
-                'app': 'Purchasing and Inventory Control System',
-                'axis': categories[1],
-                'value': 1
-            }, {
-                'app': 'Purchasing and Inventory Control System',
+                'app': 'bidPress',
                 'axis': categories[2],
                 'value': 2
             }, {
-                'app': 'Purchasing and Inventory Control System',
+                'app': 'bidPress',
                 'axis': categories[3],
                 'value': 1
             }, {
-                'app': 'Purchasing and Inventory Control System',
+                'app': 'bidPress',
                 'axis': categories[4],
-                'value': 0
-            }, {
-                'app': 'Purchasing and Inventory Control System',
-                'axis': categories[5],
                 'value': 1
             }],
             [{
-                'app': 'Security Adminisration System',
+                'app': 'eyzUp',
                 'axis': categories[0],
-                'value': 1
-            }, {
-                'app': 'Security Adminisration System',
-                'axis': categories[1],
                 'value': 0
             }, {
-                'app': 'Security Adminisration System',
-                'axis': categories[2],
+                'app': 'eyzUp',
+                'axis': categories[1],
                 'value': 2
             }, {
-                'app': 'Security Adminisration System',
+                'app': 'eyzUp',
+                'axis': categories[2],
+                'value': 1
+            }, {
+                'app': 'eyzUp',
                 'axis': categories[3],
                 'value': 1
             }, {
-                'app': 'Security Adminisration System',
+                'app': 'eyzUp',
                 'axis': categories[4],
-                'value': -1
-            }, {
-                'app': 'Security Adminisration System',
-                'axis': categories[5],
-                'value': 0
-            }]
+                'value': 1
+            }]        
         ]
     };
 }());

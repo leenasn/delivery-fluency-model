@@ -283,8 +283,10 @@ var radarSetupModule = (function () {
 
     createModelImg = function () {
         var newImg = document.createElement('img');
+        /*newImg.setAttribute('src',
+            'https://secure.surveymonkey.com/_resources/28183/23008183/bf361750-7418-458f-85a6-6c07333e4986.png');*/
         newImg.setAttribute('src',
-            'https://secure.surveymonkey.com/_resources/28183/23008183/bf361750-7418-458f-85a6-6c07333e4986.png');
+            'http://www.infoq.com/resource/articles/Continuous-Delivery-Maturity-Model/en/resources/fig1large.jpg');
         newImg.style.cursor = 'pointer';
         newImg.addEventListener('click', function () {
             document.getElementById('model').className = 'hideModel';
